@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -74,7 +75,7 @@ export default function Home() {
         <div className="space-y-4">
           {experiences.map((exp, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-400 hover:shadow-lg transition cursor-pointer"
-                 onClick={() => setOpenIndex(openIndex === index ? null : index)}>
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}>
               <h4 className="text-xl font-bold">{exp.title}</h4>
               <p className="text-gray-600">{exp.period}</p>
 
@@ -120,32 +121,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="text-center mb-12">
-        <h3 className="text-3xl font-semibold mb-4 text-gray-800">Contact</h3>
-        <p className="text-gray-700">Email: <span className="text-blue-600">jyothilekkala.ms@gmail.com</span></p>
-      <p className="mt-2">
-        GitHub:
-        <a
-          href="https://www.github.com/jyothilekkala"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >github.com/jyothilekkala
-        </a>
-      </p>
-      <p className="mt-2">
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/jyothilekkala/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >linkedin.com/in/jyothilekkala
-        </a>
-      </p>
-      </section>
 
+{/* Contact Section */}
+<section className="text-center mb-12">
+  <h3 className="text-3xl font-semibold mb-4 text-gray-800">Contact</h3>
+
+  {/* Email as plain text */}
+  <p className="text-gray-700 mb-4">
+    Email: <span className="text-blue-600">jyothilekkala.ms@gmail.com</span>
+  </p>
+
+  {/* GitHub & LinkedIn buttons */}
+  <div className="flex justify-center gap-4 flex-wrap">
+    <a
+      href="https://www.github.com/jyothilekkala"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-900 transition"
+    >
+      <FaGithub />
+      GitHub
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/jyothilekkala/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 bg-blue-700 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800 transition"
+    >
+      <FaLinkedin />
+      LinkedIn
+    </a>
+  </div>
+</section>
     </main>
   )
 }
