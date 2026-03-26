@@ -124,12 +124,26 @@ export default function Home() {
       <section className="text-center mb-12">
         <h3 className="text-3xl font-semibold mb-4 text-gray-800">Contact</h3>
         <p className="text-gray-700">Email: <span className="text-blue-600">jyothilekkala.ms@gmail.com</span></p>
-        <p className="mt-2">
-          GitHub: <a href="#" className="text-blue-600 hover:underline">github.com/jyothilekkala</a>
-        </p>
-        <p className="mt-2">
-          LinkedIn: <a href="#" className="text-blue-600 hover:underline">linkedin.com/in/jyothi-lekkala</a>
-        </p>
+      <p className="mt-2">
+        GitHub:
+        <a
+          href="https://www.github.com/jyothilekkala"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >github.com/jyothilekkala
+        </a>
+      </p>
+      <p className="mt-2">
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/jyothilekkala/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >linkedin.com/in/jyothilekkala
+        </a>
+      </p>
       </section>
 
     </main>
